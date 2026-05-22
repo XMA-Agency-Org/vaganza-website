@@ -1,26 +1,251 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* =====================================================================
+   Vaganza — design system
+   "Soft & natural": warm ivory canvas, botanical greens, soft blush,
+   a whisper of clay. Elegant soft serif display + warm humanist body.
+   ===================================================================== */
+
+@theme {
+  /* Surfaces */
+  --color-cream: #fbf7ef; /* page canvas — warm ivory */
+  --color-sand: #f1e9d8; /* alternate section surface */
+  --color-linen: #f6efe1; /* cards, raised surfaces */
+
+  /* Botanical greens */
+  --color-forest: #38442f; /* darkest — dark sections, deep text */
+  --color-sage: #5c6b49; /* primary brand green — buttons */
+  --color-moss: #7c8a63; /* mid green */
+  --color-sage-soft: #aab593; /* light green */
+
+  /* Warm accents */
+  --color-blush: #ecd6cb; /* soft rose surface */
+  --color-blush-deep: #d2a695; /* rose accent */
+  --color-clay: #ac6f4c; /* terracotta — used sparingly */
+
+  /* Ink + lines */
+  --color-ink: #2b2a24; /* primary text — warm near-black */
+  --color-stone: #6a6555; /* secondary / muted text */
+  --color-line: #e7ddc9; /* hairline borders + dividers */
+
+  /* Motion */
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-marquee-slow: marquee 60s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 11s ease-in-out infinite;
+  --animate-drift: drift 24s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
+
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-figtree);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(3%, -4%) scale(1.06);
+  }
+  66% {
+    transform: translate(-3%, 3%) scale(0.97);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -180% 0;
+  }
+  to {
+    background-position: 180% 0;
+  }
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Offset in-page anchors for the sticky header. */
+    scroll-padding-top: 6.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-sage);
+    color: var(--color-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Soft, on-brand scrollbar. */
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-sand);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-sage-soft);
+    border: 3px solid var(--color-sand);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-moss);
+  }
+}
+
+@layer components {
+  /* Section width — consistent gutters across the site. */
+  .container-x {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-x {
+      padding-inline: 2rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container-x {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Small uppercase label used above headings. */
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* Scroll-reveal — toggled by the <Reveal> component. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.9s var(--ease-soft),
+      transform 0.9s var(--ease-soft);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Decorative grain — adds warmth/depth to flat surfaces. */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
+  }
+
+  /* Animated underline for nav links. */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1.5px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s var(--ease-soft);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Rich-text from Shopify product descriptions. */
+.prose-vaganza p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: var(--color-stone);
+}
+.prose-vaganza p:last-child {
+  margin-bottom: 0;
+}
+.prose-vaganza strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.prose-vaganza ul {
+  margin: 1rem 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--color-stone);
+}
+.prose-vaganza li {
+  margin-bottom: 0.4rem;
 }
