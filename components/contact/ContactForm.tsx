@@ -27,12 +27,12 @@ export function ContactForm() {
   }
 
   const fieldClass =
-    "w-full rounded-2xl border border-line bg-cream px-4 py-3 text-[0.95rem] text-ink outline-none transition-colors placeholder:text-mauve/60 focus:border-plum";
+    "w-full rounded-xl border border-line bg-cream px-4 py-3.5 text-[0.95rem] text-ink outline-none transition-colors placeholder:text-mauve/60 focus:border-rose";
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-[2rem] border border-line bg-linen p-6 md:p-8"
+      className="rounded-3xl bg-linen p-7 md:p-10"
     >
       <div className="flex flex-col gap-4">
         <div className="grid gap-4 sm:grid-cols-2">
