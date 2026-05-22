@@ -19,8 +19,6 @@ export const revalidate = 900;
 
 export default async function HomePage() {
   const products = await getFeaturedProducts();
-  const featured =
-    products.find((p) => p.handle === "trio-set") ?? products[1] ?? products[0];
   const advanced =
     products.find((p) => p.handle === "advanced-collection") ??
     products[products.length - 1];
@@ -56,9 +54,9 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
 
-      <Hero product={featured} />
+      <Hero />
 
-      <div className="bg-forest py-3.5">
+      <div className="bg-wine py-3.5">
         <Marquee items={trustMarquee} tone="cream" />
       </div>
 

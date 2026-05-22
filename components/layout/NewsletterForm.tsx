@@ -23,10 +23,10 @@ export function NewsletterForm({ tone = "light" }: { tone?: "light" | "dark" }) 
       <p
         className={cn(
           "flex items-center gap-2.5 text-[0.95rem]",
-          onDark ? "text-cream" : "text-sage",
+          onDark ? "text-cream" : "text-plum",
         )}
       >
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage text-cream">
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-plum text-cream">
           <CheckIcon className="h-4 w-4" />
         </span>
         {state.message}
@@ -54,21 +54,21 @@ export function NewsletterForm({ tone = "light" }: { tone?: "light" | "dark" }) 
           autoComplete="email"
           placeholder="Your email address"
           className={cn(
-            "h-11 flex-1 bg-transparent px-4 text-[0.95rem] outline-none placeholder:text-stone/70",
+            "h-11 flex-1 bg-transparent px-4 text-[0.95rem] outline-none placeholder:text-mauve/70",
             onDark ? "text-cream placeholder:text-cream/55" : "text-ink",
           )}
         />
         <button
           type="submit"
           disabled={pending}
-          className="flex h-11 shrink-0 items-center gap-1.5 rounded-full bg-sage px-5 text-sm font-medium text-cream transition-colors hover:bg-forest disabled:opacity-60"
+          className="flex h-11 shrink-0 items-center gap-1.5 rounded-full bg-plum px-5 text-sm font-medium text-cream transition-colors hover:bg-wine disabled:opacity-60"
         >
           {pending ? "Joining…" : "Join"}
           <ArrowRightIcon className="h-4 w-4" />
         </button>
       </form>
       {state && !state.ok && (
-        <p className="mt-2 pl-4 text-xs text-clay">{state.message}</p>
+        <p className="mt-2 pl-4 text-xs text-rose">{state.message}</p>
       )}
     </div>
   );

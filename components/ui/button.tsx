@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "dark" | "light" | "ghost";
+type Variant = "primary" | "secondary" | "dark" | "light" | "outline" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 const VARIANTS: Record<Variant, string> = {
-  primary: "bg-sage text-cream hover:bg-forest shadow-sm",
+  primary: "bg-plum text-cream hover:bg-wine shadow-sm",
   secondary:
     "border border-ink/25 text-ink hover:bg-ink hover:text-cream hover:border-ink",
-  dark: "bg-ink text-cream hover:bg-forest shadow-sm",
+  dark: "bg-ink text-cream hover:bg-wine shadow-sm",
   light: "bg-cream text-ink hover:bg-linen shadow-sm",
+  outline: "border border-cream/45 text-cream hover:bg-cream hover:text-ink",
   ghost: "text-ink hover:bg-ink/[0.06]",
 };
 

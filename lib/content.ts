@@ -24,11 +24,11 @@ export type IconName =
 /* ----------------------------- Trust bar ------------------------------ */
 
 export const trustMarquee: string[] = [
+  "Dermatologically tested",
+  "pH-balanced for sensitive areas",
+  "Moisturizing · Brightening · Soothing",
   "Naturally-derived actives",
-  "Crafted with skincare expertise",
-  "Gentle on delicate skin",
-  "Free delivery across the UAE",
-  "Discreet, considered packaging",
+  "Free, discreet UAE delivery",
   "Loved across the Emirates",
 ];
 
@@ -121,8 +121,8 @@ export const promises: { icon: IconName; title: string; copy: string }[] = [
   },
   {
     icon: "shield",
-    title: "Skincare expertise",
-    copy: "Every formula is considered, balanced, and crafted to be genuinely gentle.",
+    title: "Dermatologically tested",
+    copy: "pH-balanced and dermatologically tested — gentle enough for the most sensitive skin.",
   },
   {
     icon: "lock",

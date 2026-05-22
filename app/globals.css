@@ -2,31 +2,28 @@
 
 /* =====================================================================
    Vaganza — design system
-   "Soft & natural": warm ivory canvas, botanical greens, soft blush,
-   a whisper of clay. Elegant soft serif display + warm humanist body.
+   Brand identity sourced from vaganzaofficial.com: a feminine, luxurious
+   palette of deep plum, dark wine and dusty rose on a soft blush canvas,
+   set in an elegant Cormorant Garamond serif with Roboto for body copy.
    ===================================================================== */
 
 @theme {
   /* Surfaces */
-  --color-cream: #fbf7ef; /* page canvas — warm ivory */
-  --color-sand: #f1e9d8; /* alternate section surface */
-  --color-linen: #f6efe1; /* cards, raised surfaces */
+  --color-cream: #fcf7f5; /* page canvas — soft blush-white */
+  --color-linen: #f8ecf0; /* cards, raised surfaces */
+  --color-sand: #f2dee7; /* alternate section surface */
+  --color-petal: #ecccdb; /* soft rose surface — feature bands */
 
-  /* Botanical greens */
-  --color-forest: #38442f; /* darkest — dark sections, deep text */
-  --color-sage: #5c6b49; /* primary brand green — buttons */
-  --color-moss: #7c8a63; /* mid green */
-  --color-sage-soft: #aab593; /* light green */
-
-  /* Warm accents */
-  --color-blush: #ecd6cb; /* soft rose surface */
-  --color-blush-deep: #d2a695; /* rose accent */
-  --color-clay: #ac6f4c; /* terracotta — used sparingly */
+  /* Brand core (from vaganzaofficial.com) */
+  --color-plum: #4c2c3b; /* primary — buttons, headings, accents */
+  --color-wine: #4c122a; /* darkest — dark sections, hover */
+  --color-rose: #b15878; /* dusty-rose accent — emphasis, stars */
+  --color-rose-soft: #dcb3c4; /* light rose — decorative */
 
   /* Ink + lines */
-  --color-ink: #2b2a24; /* primary text — warm near-black */
-  --color-stone: #6a6555; /* secondary / muted text */
-  --color-line: #e7ddc9; /* hairline borders + dividers */
+  --color-ink: #2f2027; /* primary text — deep plum-charcoal */
+  --color-mauve: #8a7079; /* secondary / muted text */
+  --color-line: #ecd9df; /* hairline borders + dividers */
 
   /* Motion */
   --animate-marquee: marquee 38s linear infinite;
@@ -40,8 +37,8 @@
 }
 
 @theme inline {
-  --font-display: var(--font-fraunces);
-  --font-sans: var(--font-figtree);
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-roboto);
 }
 
 @keyframes marquee {
@@ -109,12 +106,12 @@
   }
 
   ::selection {
-    background-color: var(--color-sage);
+    background-color: var(--color-rose);
     color: var(--color-cream);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-sage);
+    outline: 2px solid var(--color-rose);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -128,12 +125,12 @@
     background: var(--color-sand);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-sage-soft);
+    background: var(--color-rose-soft);
     border: 3px solid var(--color-sand);
     border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-moss);
+    background: var(--color-rose);
   }
 }
 
@@ -231,7 +228,7 @@
 .prose-vaganza p {
   margin-bottom: 1rem;
   line-height: 1.75;
-  color: var(--color-stone);
+  color: var(--color-mauve);
 }
 .prose-vaganza p:last-child {
   margin-bottom: 0;
@@ -244,7 +241,7 @@
   margin: 1rem 0;
   padding-left: 1.1rem;
   list-style: disc;
-  color: var(--color-stone);
+  color: var(--color-mauve);
 }
 .prose-vaganza li {
   margin-bottom: 0.4rem;

@@ -74,10 +74,10 @@ export function ProductPurchase({ product }: { product: Product }) {
         </span>
         {compareAt && saved > 0 && (
           <>
-            <span className="text-lg text-stone line-through">
+            <span className="text-lg text-mauve line-through">
               {formatMoney(compareAt.amount, compareAt.currencyCode)}
             </span>
-            <span className="rounded-full bg-clay/15 px-2.5 py-1 text-xs font-semibold text-clay">
+            <span className="rounded-full bg-rose/15 px-2.5 py-1 text-xs font-semibold text-rose">
               Save {saved}%
             </span>
           </>
@@ -106,7 +106,7 @@ export function ProductPurchase({ product }: { product: Product }) {
                     className={cn(
                       "rounded-full border px-4 py-2 text-sm transition-all",
                       isSelected
-                        ? "border-sage bg-sage text-cream"
+                        ? "border-plum bg-plum text-cream"
                         : "border-line text-ink hover:border-ink",
                     )}
                   >
@@ -162,16 +162,16 @@ export function ProductPurchase({ product }: { product: Product }) {
           {pending ? "Preparing checkout…" : "Buy it Now"}
         </Button>
       </div>
-      {error && <p className="mt-2.5 text-xs text-clay">{error}</p>}
+      {error && <p className="mt-2.5 text-xs text-rose">{error}</p>}
 
       {/* Reassurance */}
       <div className="mt-7 flex flex-col gap-2.5 border-t border-line pt-6">
-        <p className="flex items-center gap-2.5 text-sm text-stone">
-          <TruckIcon className="h-5 w-5 shrink-0 text-sage" />
+        <p className="flex items-center gap-2.5 text-sm text-mauve">
+          <TruckIcon className="h-5 w-5 shrink-0 text-plum" />
           Free, discreet delivery across the UAE
         </p>
-        <p className="flex items-center gap-2.5 text-sm text-stone">
-          <LockIcon className="h-5 w-5 shrink-0 text-sage" />
+        <p className="flex items-center gap-2.5 text-sm text-mauve">
+          <LockIcon className="h-5 w-5 shrink-0 text-plum" />
           Secure checkout — your details always stay private
         </p>
       </div>

@@ -9,22 +9,22 @@ const ACCENTS: Record<
   { field: string; glow: string; mark: string; seam: string }
 > = {
   sage: {
-    field: "bg-sage-soft/35",
-    glow: "bg-moss/40",
-    mark: "text-sage",
-    seam: "bg-sage/25",
+    field: "bg-rose-soft/35",
+    glow: "bg-plum/40",
+    mark: "text-plum",
+    seam: "bg-plum/25",
   },
   blush: {
-    field: "bg-blush/55",
-    glow: "bg-blush-deep/45",
-    mark: "text-blush-deep",
-    seam: "bg-blush-deep/30",
+    field: "bg-petal/55",
+    glow: "bg-rose/45",
+    mark: "text-rose",
+    seam: "bg-rose/30",
   },
   clay: {
-    field: "bg-clay/18",
-    glow: "bg-clay/30",
-    mark: "text-clay",
-    seam: "bg-clay/25",
+    field: "bg-rose/18",
+    glow: "bg-rose/30",
+    mark: "text-rose",
+    seam: "bg-rose/25",
   },
 };
 
@@ -118,7 +118,7 @@ export function ProductVisual({
             <span className={cn("text-[0.66rem] font-semibold tracking-[0.14em] uppercase", a.mark)}>
               {sessions} {sessions === 1 ? "Session" : "Sessions"}
             </span>
-            <span className="text-[0.6rem] tracking-[0.1em] text-stone uppercase">
+            <span className="text-[0.6rem] tracking-[0.1em] text-mauve uppercase">
               Hydrogel Treatment
             </span>
           </div>

@@ -49,21 +49,21 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-linen pt-12 pb-16 md:pt-16 md:pb-20">
         <LeafSprig
           aria-hidden
-          className="absolute -top-6 right-6 hidden h-64 w-auto text-sage/15 md:block"
+          className="absolute -top-6 right-6 hidden h-64 w-auto text-plum/15 md:block"
         />
         <div className="container-x relative max-w-3xl">
-          <nav className="flex items-center gap-2 text-sm text-stone">
+          <nav className="flex items-center gap-2 text-sm text-mauve">
             <Link href="/" className="transition-colors hover:text-ink">
               Home
             </Link>
             <span aria-hidden>·</span>
             <span className="text-ink">Contact</span>
           </nav>
-          <p className="eyebrow mt-6 text-sage">We&apos;re here for you</p>
+          <p className="eyebrow mt-6 text-plum">We&apos;re here for you</p>
           <h1 className="mt-3 font-display text-[clamp(2.3rem,1.5rem+3vw,3.8rem)] leading-[1.06] tracking-[-0.02em] text-balance text-ink">
             Let&apos;s talk skincare
           </h1>
-          <p className="mt-5 text-[1.08rem] leading-relaxed text-stone">
+          <p className="mt-5 text-[1.08rem] leading-relaxed text-mauve">
             Whether you have a question about a product, need help choosing a
             ritual, or want to follow up on an order — our team would love to
             hear from you.
@@ -77,7 +77,7 @@ export default function ContactPage() {
           {/* Contact details */}
           <div>
             <h2 className="font-display text-2xl text-ink">Reach us directly</h2>
-            <p className="mt-2 leading-relaxed text-stone">
+            <p className="mt-2 leading-relaxed text-mauve">
               Prefer to talk? Choose whichever way suits you best.
             </p>
 
@@ -91,11 +91,11 @@ export default function ContactPage() {
                     : {})}
                   className="group flex items-center gap-4 rounded-2xl border border-line bg-linen p-5 transition-all hover:-translate-y-0.5 hover:shadow-md"
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage/12 text-sage transition-colors group-hover:bg-sage group-hover:text-cream">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-plum/12 text-plum transition-colors group-hover:bg-plum group-hover:text-cream">
                     <method.icon className="h-6 w-6" />
                   </span>
                   <span>
-                    <span className="block text-xs tracking-[0.12em] text-stone uppercase">
+                    <span className="block text-xs tracking-[0.12em] text-mauve uppercase">
                       {method.label}
                     </span>
                     <span className="font-display text-lg text-ink">
@@ -106,11 +106,11 @@ export default function ContactPage() {
               ))}
 
               <div className="flex items-center gap-4 rounded-2xl border border-line bg-linen p-5">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage/12 text-sage">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-plum/12 text-plum">
                   <MapPinIcon className="h-6 w-6" />
                 </span>
                 <span>
-                  <span className="block text-xs tracking-[0.12em] text-stone uppercase">
+                  <span className="block text-xs tracking-[0.12em] text-mauve uppercase">
                     Location
                   </span>
                   <span className="font-display text-lg text-ink">
@@ -120,9 +120,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-4 flex items-start gap-3 rounded-2xl bg-sage/10 p-5">
-              <TruckIcon className="mt-0.5 h-6 w-6 shrink-0 text-sage" />
-              <p className="text-sm leading-relaxed text-stone">
+            <div className="mt-4 flex items-start gap-3 rounded-2xl bg-plum/10 p-5">
+              <TruckIcon className="mt-0.5 h-6 w-6 shrink-0 text-plum" />
+              <p className="text-sm leading-relaxed text-mauve">
                 <strong className="font-semibold text-ink">
                   Free, discreet delivery
                 </strong>{" "}

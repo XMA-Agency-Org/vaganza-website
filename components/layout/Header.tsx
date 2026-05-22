@@ -68,7 +68,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "link-underline text-[0.92rem] font-medium transition-colors",
-                isActive(link.href) ? "text-sage" : "text-ink hover:text-sage",
+                isActive(link.href) ? "text-plum" : "text-ink hover:text-plum",
               )}
             >
               {link.label}
@@ -93,7 +93,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "link-underline text-[0.92rem] font-medium transition-colors",
-                isActive(link.href) ? "text-sage" : "text-ink hover:text-sage",
+                isActive(link.href) ? "text-plum" : "text-ink hover:text-plum",
               )}
             >
               {link.label}
@@ -117,7 +117,7 @@ export function Header() {
           >
             <BagIcon className="h-6 w-6" />
             {hydrated && count > 0 && (
-              <span className="absolute top-0.5 right-0.5 flex h-[1.15rem] min-w-[1.15rem] items-center justify-center rounded-full bg-sage px-1 text-[0.66rem] font-semibold text-cream">
+              <span className="absolute top-0.5 right-0.5 flex h-[1.15rem] min-w-[1.15rem] items-center justify-center rounded-full bg-plum px-1 text-[0.66rem] font-semibold text-cream">
                 {count}
               </span>
             )}
@@ -165,7 +165,7 @@ export function Header() {
                 className={cn(
                   "rounded-2xl px-4 py-3 font-display text-2xl transition-colors",
                   isActive(link.href)
-                    ? "bg-linen text-sage"
+                    ? "bg-linen text-plum"
                     : "text-ink hover:bg-linen",
                 )}
               >
@@ -175,12 +175,12 @@ export function Header() {
           </div>
 
           <div className="border-t border-line px-6 py-5">
-            <p className="text-sm text-stone">Speak with our team</p>
+            <p className="text-sm text-mauve">Speak with our team</p>
             <a
               href={siteConfig.phoneHref}
               className="mt-1 flex items-center gap-2 font-display text-lg text-ink"
             >
-              <PhoneIcon className="h-5 w-5 text-sage" />
+              <PhoneIcon className="h-5 w-5 text-plum" />
               {siteConfig.phoneDisplay}
             </a>
           </div>

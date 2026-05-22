@@ -23,7 +23,7 @@ function LinkColumn({
 }) {
   return (
     <div>
-      <h3 className="eyebrow text-sage-soft">{title}</h3>
+      <h3 className="eyebrow text-rose-soft">{title}</h3>
       <ul className="mt-4 flex flex-col gap-2.5">
         {links.map((link) => (
           <li key={link.label}>
@@ -42,8 +42,8 @@ function LinkColumn({
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-forest text-cream">
-      <LeafBranch className="pointer-events-none absolute -top-6 right-0 h-40 w-auto text-sage-soft/15" />
+    <footer className="relative overflow-hidden bg-wine text-cream">
+      <LeafBranch className="pointer-events-none absolute -top-6 right-0 h-40 w-auto text-rose-soft/15" />
 
       <div className="container-x relative py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr]">
@@ -80,14 +80,14 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="eyebrow text-sage-soft">Get in Touch</h3>
+            <h3 className="eyebrow text-rose-soft">Get in Touch</h3>
             <ul className="mt-4 flex flex-col gap-3.5">
               <li>
                 <a
                   href={siteConfig.phoneHref}
                   className="flex items-start gap-3 text-[0.95rem] text-cream/70 transition-colors hover:text-cream"
                 >
-                  <PhoneIcon className="mt-0.5 h-5 w-5 shrink-0 text-sage-soft" />
+                  <PhoneIcon className="mt-0.5 h-5 w-5 shrink-0 text-rose-soft" />
                   {siteConfig.phoneDisplay}
                 </a>
               </li>
@@ -98,7 +98,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-[0.95rem] text-cream/70 transition-colors hover:text-cream"
                 >
-                  <WhatsappIcon className="mt-0.5 h-5 w-5 shrink-0 text-sage-soft" />
+                  <WhatsappIcon className="mt-0.5 h-5 w-5 shrink-0 text-rose-soft" />
                   Chat on WhatsApp
                 </a>
               </li>
@@ -107,12 +107,12 @@ export function Footer() {
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-start gap-3 text-[0.95rem] text-cream/70 transition-colors hover:text-cream"
                 >
-                  <MailIcon className="mt-0.5 h-5 w-5 shrink-0 text-sage-soft" />
+                  <MailIcon className="mt-0.5 h-5 w-5 shrink-0 text-rose-soft" />
                   {siteConfig.email}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-[0.95rem] text-cream/70">
-                <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-sage-soft" />
+                <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-rose-soft" />
                 {siteConfig.location}
               </li>
             </ul>

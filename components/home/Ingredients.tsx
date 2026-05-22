@@ -19,9 +19,9 @@ const ICONS: ((p: IconProps) => React.ReactElement)[] = [
 ];
 
 const TINT: Record<string, string> = {
-  sage: "bg-sage-soft/25",
-  blush: "bg-blush/30",
-  clay: "bg-clay/35",
+  sage: "bg-rose-soft/25",
+  blush: "bg-petal/30",
+  clay: "bg-rose/35",
 };
 
 /** The "what's inside" section — the active ingredient story on a dark field. */
@@ -29,15 +29,15 @@ export function Ingredients() {
   return (
     <section
       id="ingredients"
-      className="relative overflow-hidden bg-forest py-20 text-cream md:py-28"
+      className="relative overflow-hidden bg-wine py-20 text-cream md:py-28"
     >
       <OrganicBlob
         aria-hidden
-        className="absolute -top-24 -right-24 h-96 w-96 text-sage/20"
+        className="absolute -top-24 -right-24 h-96 w-96 text-plum/20"
       />
       <OrganicBlob
         aria-hidden
-        className="absolute -bottom-32 -left-24 h-80 w-80 text-moss/15"
+        className="absolute -bottom-32 -left-24 h-80 w-80 text-plum/15"
       />
 
       <div className="container-x relative">
@@ -67,7 +67,7 @@ export function Ingredients() {
                       <Icon className="h-7 w-7" />
                     </span>
                     <div>
-                      <p className="eyebrow text-sage-soft">{ingredient.role}</p>
+                      <p className="eyebrow text-rose-soft">{ingredient.role}</p>
                       <h3 className="mt-0.5 font-display text-2xl text-cream">
                         {ingredient.name}
                       </h3>

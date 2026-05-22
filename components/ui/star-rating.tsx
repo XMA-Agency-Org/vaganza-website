@@ -24,13 +24,13 @@ export function StarRating({
       role="img"
       aria-label={`Rated ${rating} out of 5`}
     >
-      <span className="flex text-stone/25">
+      <span className="flex text-mauve/25">
         {stars.map((i) => (
           <StarIcon key={i} style={dimension} />
         ))}
       </span>
       <span
-        className="absolute inset-0 flex overflow-hidden text-clay"
+        className="absolute inset-0 flex overflow-hidden text-rose"
         style={{ width: `${pct}%` }}
       >
         {stars.map((i) => (

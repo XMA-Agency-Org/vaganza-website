@@ -34,7 +34,7 @@ export function SectionHeading({
           className={cn(
             "eyebrow mb-4 flex items-center gap-2.5",
             align === "center" && "justify-center",
-            tone === "cream" ? "text-sage-soft" : "text-sage",
+            tone === "cream" ? "text-rose-soft" : "text-plum",
           )}
         >
           <span className="h-px w-7 bg-current opacity-50" />
@@ -45,7 +45,7 @@ export function SectionHeading({
         className={cn(
           "font-display text-[clamp(2rem,1.25rem+2.7vw,3.45rem)] leading-[1.08] tracking-[-0.02em] text-balance",
           "[&_em]:font-display [&_em]:italic",
-          tone === "cream" ? "text-cream [&_em]:text-sage-soft" : "text-ink [&_em]:text-sage",
+          tone === "cream" ? "text-cream [&_em]:text-rose-soft" : "text-ink [&_em]:text-rose",
         )}
       >
         {title}
@@ -54,7 +54,7 @@ export function SectionHeading({
         <p
           className={cn(
             "mt-5 text-[1.05rem] leading-relaxed",
-            tone === "cream" ? "text-cream/75" : "text-stone",
+            tone === "cream" ? "text-cream/75" : "text-mauve",
           )}
         >
           {intro}

@@ -23,7 +23,7 @@ export function FAQ() {
           />
           <div className="mt-8 rounded-[1.75rem] border border-line bg-linen p-6">
             <p className="font-display text-lg text-ink">Still curious?</p>
-            <p className="mt-1 text-sm leading-relaxed text-stone">
+            <p className="mt-1 text-sm leading-relaxed text-mauve">
               Our team is happy to help you choose the right ritual for your
               skin.
             </p>

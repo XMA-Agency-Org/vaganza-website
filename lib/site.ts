@@ -10,7 +10,7 @@ export const siteConfig = {
   url: "https://vaganzaofficial.com",
   tagline: "Luxurious skincare, naturally crafted.",
   description:
-    "Vaganza creates naturally-derived, dermatologically-minded skincare for delicate skin. Pure botanicals, active serums, and rituals every woman deserves.",
+    "Vaganza's Secret Mask is a pH-balanced, dermatologically-tested intimate treatment that moisturizes, soothes and gently brightens delicate skin — luxurious, naturally-crafted care every woman deserves.",
   // Contact details (sourced from the current vaganzaofficial.com site)
   phoneDisplay: "+971 54 741 1369",
   phoneHref: "tel:+971547411369",

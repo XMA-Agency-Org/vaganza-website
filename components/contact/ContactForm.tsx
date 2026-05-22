@@ -27,7 +27,7 @@ export function ContactForm() {
   }
 
   const fieldClass =
-    "w-full rounded-2xl border border-line bg-cream px-4 py-3 text-[0.95rem] text-ink outline-none transition-colors placeholder:text-stone/60 focus:border-sage";
+    "w-full rounded-2xl border border-line bg-cream px-4 py-3 text-[0.95rem] text-ink outline-none transition-colors placeholder:text-mauve/60 focus:border-plum";
 
   return (
     <form
@@ -117,12 +117,12 @@ export function ContactForm() {
         </Button>
 
         {sent && (
-          <p className="text-center text-sm text-sage">
+          <p className="text-center text-sm text-plum">
             Opening WhatsApp — if it didn&apos;t open, message us directly at the
             number opposite.
           </p>
         )}
-        <p className="text-center text-xs text-stone">
+        <p className="text-center text-xs text-mauve">
           We typically reply within a few hours, 7 days a week.
         </p>
       </div>

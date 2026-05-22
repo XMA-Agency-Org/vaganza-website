@@ -13,9 +13,9 @@ import { BagIcon, CheckIcon, CloseIcon, MinusIcon, PlusIcon } from "../ui/icons"
 import { LeafMark } from "../ui/logo";
 
 const ACCENT_BG: Record<CartLine["accent"], string> = {
-  sage: "bg-sage-soft/45 text-sage",
-  blush: "bg-blush/65 text-blush-deep",
-  clay: "bg-clay/15 text-clay",
+  sage: "bg-rose-soft/45 text-plum",
+  blush: "bg-petal/65 text-rose",
+  clay: "bg-rose/15 text-rose",
 };
 
 /** Builds a pre-filled WhatsApp order message (used when Shopify isn't wired). */
@@ -114,7 +114,7 @@ export function CartDrawer() {
         <header className="flex items-center justify-between border-b border-line px-6 py-5">
           <div className="flex items-baseline gap-2">
             <h2 className="font-display text-xl text-ink">Your Bag</h2>
-            <span className="text-sm text-stone">
+            <span className="text-sm text-mauve">
               ({count} {count === 1 ? "item" : "items"})
             </span>
           </div>
@@ -130,12 +130,12 @@ export function CartDrawer() {
         {lines.length === 0 ? (
           /* Empty state */
           <div className="flex flex-1 flex-col items-center justify-center gap-5 px-8 text-center">
-            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-linen text-sage">
+            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-linen text-plum">
               <BagIcon className="h-8 w-8" />
             </span>
             <div>
               <p className="font-display text-xl text-ink">Your bag is empty</p>
-              <p className="mt-1.5 text-sm text-stone">
+              <p className="mt-1.5 text-sm text-mauve">
                 Begin your Vaganza ritual — your skin will thank you.
               </p>
             </div>
@@ -176,7 +176,7 @@ export function CartDrawer() {
                         <Link
                           href={`/products/${line.handle}`}
                           onClick={closeCart}
-                          className="font-display text-[1.02rem] leading-tight text-ink hover:text-sage"
+                          className="font-display text-[1.02rem] leading-tight text-ink hover:text-plum"
                         >
                           {line.title}
                         </Link>
@@ -188,7 +188,7 @@ export function CartDrawer() {
                         </span>
                       </div>
                       {line.variantTitle && line.variantTitle !== "Default" && (
-                        <span className="mt-0.5 text-xs text-stone">
+                        <span className="mt-0.5 text-xs text-mauve">
                           {line.variantTitle}
                         </span>
                       )}
@@ -220,7 +220,7 @@ export function CartDrawer() {
                         </div>
                         <button
                           onClick={() => removeItem(line.variantId)}
-                          className="text-xs text-stone underline-offset-4 transition-colors hover:text-clay hover:underline"
+                          className="text-xs text-mauve underline-offset-4 transition-colors hover:text-rose hover:underline"
                         >
                           Remove
                         </button>
@@ -233,18 +233,18 @@ export function CartDrawer() {
 
             {/* Footer */}
             <footer className="border-t border-line bg-linen px-6 py-5">
-              <p className="mb-3 flex items-center justify-center gap-2 text-[0.8rem] text-sage">
+              <p className="mb-3 flex items-center justify-center gap-2 text-[0.8rem] text-plum">
                 <CheckIcon className="h-4 w-4" />
                 Free, discreet delivery across the UAE included
               </p>
               <div className="mb-4 flex items-center justify-between">
-                <span className="text-sm text-stone">Subtotal</span>
+                <span className="text-sm text-mauve">Subtotal</span>
                 <span className="font-display text-xl text-ink">
                   {formatMoney(subtotal)}
                 </span>
               </div>
               {error && (
-                <p className="mb-3 text-center text-xs text-clay">{error}</p>
+                <p className="mb-3 text-center text-xs text-rose">{error}</p>
               )}
               <Button
                 onClick={handleCheckout}
@@ -256,11 +256,11 @@ export function CartDrawer() {
               </Button>
               <button
                 onClick={closeCart}
-                className="mt-3 w-full text-center text-sm text-stone underline-offset-4 hover:text-ink hover:underline"
+                className="mt-3 w-full text-center text-sm text-mauve underline-offset-4 hover:text-ink hover:underline"
               >
                 Continue shopping
               </button>
-              <p className="mt-3 text-center text-[0.7rem] text-stone/80">
+              <p className="mt-3 text-center text-[0.7rem] text-mauve/80">
                 Secure checkout · Need help? {siteConfig.phoneDisplay}
               </p>
             </footer>

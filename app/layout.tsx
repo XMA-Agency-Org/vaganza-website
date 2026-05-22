@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree, Fraunces } from "next/font/google";
+import { Cormorant_Garamond, Roboto } from "next/font/google";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -8,18 +8,20 @@ import { CartProvider } from "@/lib/cart/cart-context";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-/** Soft, optical serif for display — chosen for its warm, organic character. */
-const fraunces = Fraunces({
+/** Elegant high-contrast serif for display — Vaganza's brand heading face. */
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-/** Warm humanist sans for body copy and UI. */
-const figtree = Figtree({
+/** Clean, neutral sans for body copy and UI — Vaganza's brand body face. */
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-figtree",
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
@@ -74,7 +76,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${figtree.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${roboto.variable}`}>
       <body className="flex min-h-screen flex-col bg-cream text-ink antialiased">
         <CartProvider>
           <AnnouncementBar />

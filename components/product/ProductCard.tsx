@@ -36,7 +36,7 @@ export function ProductCard({
             </span>
           )}
           {saved > 0 && (
-            <span className="rounded-full bg-clay px-3 py-1 text-[0.66rem] font-semibold tracking-[0.12em] text-cream uppercase">
+            <span className="rounded-full bg-rose px-3 py-1 text-[0.66rem] font-semibold tracking-[0.12em] text-cream uppercase">
               Save {saved}%
             </span>
           )}
@@ -68,7 +68,7 @@ export function ProductCard({
       <div className="flex flex-1 flex-col px-1 pt-5">
         <div className="flex items-center gap-2">
           <StarRating rating={product.rating} size={14} />
-          <span className="text-xs text-stone">
+          <span className="text-xs text-mauve">
             {product.reviewCount > 0
               ? `${product.rating.toFixed(1)} (${product.reviewCount})`
               : "New"}
@@ -76,11 +76,11 @@ export function ProductCard({
         </div>
 
         <h3 className="mt-2 font-display text-xl leading-tight text-ink">
-          <Link href={href} className="transition-colors hover:text-sage">
+          <Link href={href} className="transition-colors hover:text-plum">
             {product.title}
           </Link>
         </h3>
-        <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-stone">
+        <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-mauve">
           {product.subtitle}
         </p>
 
@@ -89,7 +89,7 @@ export function ProductCard({
             {formatMoney(price.amount, price.currencyCode)}
           </span>
           {compareAt && saved > 0 && (
-            <span className="text-sm text-stone line-through">
+            <span className="text-sm text-mauve line-through">
               {formatMoney(compareAt.amount, compareAt.currencyCode)}
             </span>
           )}

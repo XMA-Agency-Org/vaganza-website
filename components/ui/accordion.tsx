@@ -33,7 +33,7 @@ export function Accordion({
                 <span
                   className={cn(
                     "font-display text-lg leading-snug transition-colors md:text-xl",
-                    isOpen ? "text-sage" : "text-ink group-hover:text-sage",
+                    isOpen ? "text-plum" : "text-ink group-hover:text-plum",
                   )}
                 >
                   {item.question}
@@ -42,8 +42,8 @@ export function Accordion({
                   className={cn(
                     "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-all duration-300",
                     isOpen
-                      ? "rotate-[135deg] border-sage bg-sage text-cream"
-                      : "border-line text-ink group-hover:border-sage",
+                      ? "rotate-[135deg] border-plum bg-plum text-cream"
+                      : "border-line text-ink group-hover:border-plum",
                   )}
                 >
                   <PlusIcon className="h-4 w-4" />
@@ -59,7 +59,7 @@ export function Accordion({
               )}
             >
               <div className="overflow-hidden">
-                <p className="max-w-2xl pr-12 pb-6 leading-relaxed text-stone">
+                <p className="max-w-2xl pr-12 pb-6 leading-relaxed text-mauve">
                   {item.answer}
                 </p>
               </div>

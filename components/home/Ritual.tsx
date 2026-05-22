@@ -21,19 +21,19 @@ export function Ritual() {
           {/* Connecting line */}
           <div
             aria-hidden
-            className="absolute top-9 right-[16%] left-[16%] hidden border-t border-dashed border-sage/30 md:block"
+            className="absolute top-9 right-[16%] left-[16%] hidden border-t border-dashed border-plum/30 md:block"
           />
 
           {ritualSteps.map((step, index) => (
             <Reveal key={step.step} delay={index * 110}>
               <div className="relative flex flex-col items-center text-center">
-                <span className="flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border border-line bg-cream font-display text-2xl text-sage shadow-sm">
+                <span className="flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border border-line bg-cream font-display text-2xl text-plum shadow-sm">
                   {step.step}
                 </span>
                 <h3 className="mt-6 font-display text-2xl text-ink">
                   {step.title}
                 </h3>
-                <p className="mt-2.5 max-w-xs leading-relaxed text-stone">
+                <p className="mt-2.5 max-w-xs leading-relaxed text-mauve">
                   {step.copy}
                 </p>
               </div>

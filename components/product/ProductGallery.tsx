@@ -52,7 +52,7 @@ export function ProductGallery({ product }: { product: Product }) {
               className={cn(
                 "relative aspect-square overflow-hidden rounded-xl border transition-all",
                 index === activeIndex
-                  ? "border-sage ring-1 ring-sage"
+                  ? "border-plum ring-1 ring-plum"
                   : "border-line hover:border-ink/40",
               )}
             >

@@ -10,14 +10,14 @@ export function Promises() {
           const Icon = iconRegistry[promise.icon];
           return (
             <div key={promise.title} className="flex items-start gap-3.5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sage/10 text-sage">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-plum/10 text-plum">
                 <Icon className="h-5 w-5" />
               </span>
               <div>
                 <p className="font-display text-[1.05rem] text-ink">
                   {promise.title}
                 </p>
-                <p className="mt-0.5 text-sm leading-snug text-stone">
+                <p className="mt-0.5 text-sm leading-snug text-mauve">
                   {promise.copy}
                 </p>
               </div>

@@ -6,19 +6,19 @@ import { Reveal } from "../ui/reveal";
 /** Email capture — the soft, final call to stay connected. */
 export function Newsletter() {
   return (
-    <section className="relative overflow-hidden bg-forest py-20 text-cream md:py-24">
+    <section className="relative overflow-hidden bg-wine py-20 text-cream md:py-24">
       <LeafBranch
         aria-hidden
-        className="absolute -top-4 -left-10 h-44 w-auto text-sage-soft/15"
+        className="absolute -top-4 -left-10 h-44 w-auto text-rose-soft/15"
       />
       <LeafBranch
         aria-hidden
-        className="absolute -right-10 -bottom-6 h-44 w-auto rotate-180 text-sage-soft/15"
+        className="absolute -right-10 -bottom-6 h-44 w-auto rotate-180 text-rose-soft/15"
       />
 
       <div className="container-x relative">
         <Reveal className="mx-auto max-w-xl text-center">
-          <p className="eyebrow flex items-center justify-center gap-2.5 text-sage-soft">
+          <p className="eyebrow flex items-center justify-center gap-2.5 text-rose-soft">
             <LeafMark className="h-4 w-4" />
             The Vaganza circle
           </p>
