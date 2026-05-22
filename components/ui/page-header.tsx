@@ -16,7 +16,7 @@ export function PageHeader({
   current: string;
 }) {
   return (
-    <section className="bg-cream pt-14 pb-12 md:pt-24 md:pb-16">
+    <section className="bg-cream pt-12 pb-10 md:pt-20 md:pb-14">
       <div className="container-x">
         <nav className="flex items-center gap-2 text-sm text-mauve">
           <Link href="/" className="transition-colors hover:text-ink">

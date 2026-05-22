@@ -24,7 +24,7 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="bg-linen py-24 md:py-36">
+      <section className="bg-linen py-20 md:py-28">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <div className="relative aspect-square overflow-hidden rounded-[1.5rem] shadow-[0_50px_90px_-50px_rgba(47,32,39,0.55)]">
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-cream py-24 md:py-36">
+      <section className="bg-cream py-20 md:py-28">
         <div className="container-x">
           <SectionHeading
             eyebrow="What we stand for"
@@ -79,7 +79,7 @@ export default function AboutPage() {
               </>
             }
           />
-          <div className="mt-16 grid gap-x-10 gap-y-12 md:mt-20 md:grid-cols-3">
+          <div className="mt-16 grid gap-x-10 gap-y-12 md:mt-16 md:grid-cols-3">
             {brandValues.map((value, index) => (
               <Reveal key={value.title} delay={index * 130}>
                 <div className="border-t border-line pt-8">
@@ -100,7 +100,7 @@ export default function AboutPage() {
       </section>
 
       {/* Closing CTA */}
-      <section className="bg-petal py-24 md:py-32">
+      <section className="bg-petal py-20 md:py-28">
         <div className="container-x flex flex-col items-center gap-7 text-center">
           <p className="eyebrow text-rose">Begin your ritual</p>
           <h2 className="max-w-2xl font-display font-normal text-[clamp(2rem,1.4rem+2.4vw,3.4rem)] leading-[1.1] tracking-[-0.02em] text-balance text-ink">

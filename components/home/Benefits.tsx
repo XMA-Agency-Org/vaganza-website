@@ -6,7 +6,7 @@ import { SectionHeading } from "../ui/section-heading";
 /** Four ways the ritual cares for delicate skin — an editorial column set. */
 export function Benefits() {
   return (
-    <section className="bg-linen py-24 md:py-36">
+    <section className="bg-linen py-20 md:py-28">
       <div className="container-x">
         <SectionHeading
           eyebrow="The difference"
@@ -18,7 +18,7 @@ export function Benefits() {
           intro="Every Vaganza ritual is built around four simple, gentle promises to delicate, sensitive skin."
         />
 
-        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
           {benefits.map((benefit, index) => {
             const Icon = iconRegistry[benefit.icon];
             return (

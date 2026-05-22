@@ -4,7 +4,7 @@ import { Reveal } from "../ui/reveal";
 /** Email capture — the soft, final invitation to stay connected. */
 export function Newsletter() {
   return (
-    <section className="bg-wine py-28 text-cream md:py-40">
+    <section className="bg-wine py-20 text-cream md:py-28">
       <div className="container-x">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow text-rose-soft">The Vaganza circle</p>

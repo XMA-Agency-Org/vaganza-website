@@ -30,7 +30,7 @@ export default async function ShopPage() {
       />
 
       {/* Product grid */}
-      <section className="bg-cream pb-24 md:pb-32">
+      <section className="bg-cream pb-20 md:pb-28">
         <div className="container-x">
           <p className="mb-10 text-sm tracking-wide text-mauve">
             {products.length} {products.length === 1 ? "product" : "products"}
@@ -48,7 +48,7 @@ export default async function ShopPage() {
       <Promises />
 
       {/* Help CTA */}
-      <section className="bg-petal py-24 md:py-32">
+      <section className="bg-petal py-20 md:py-28">
         <div className="container-x flex flex-col items-center gap-6 text-center">
           <p className="eyebrow text-rose">Here to help</p>
           <h2 className="max-w-xl font-display font-normal text-[clamp(2rem,1.4rem+2.2vw,3.2rem)] leading-[1.1] tracking-[-0.02em] text-balance text-ink">

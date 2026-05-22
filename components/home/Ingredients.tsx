@@ -7,7 +7,7 @@ export function Ingredients() {
   return (
     <section
       id="ingredients"
-      className="bg-wine py-24 text-cream md:py-40"
+      className="bg-wine py-20 text-cream md:py-32"
     >
       <div className="container-x">
         <SectionHeading
@@ -22,7 +22,7 @@ export function Ingredients() {
           intro="Four considered ingredients, each chosen for the way it cares for delicate skin — no harsh fillers, no compromise."
         />
 
-        <div className="mt-16 grid gap-x-16 gap-y-14 md:mt-24 md:grid-cols-2">
+        <div className="mt-16 grid gap-x-16 gap-y-14 md:mt-16 md:grid-cols-2">
           {ingredients.map((ingredient, index) => (
             <Reveal key={ingredient.name} delay={(index % 2) * 130}>
               <div className="border-t border-cream/15 pt-8">

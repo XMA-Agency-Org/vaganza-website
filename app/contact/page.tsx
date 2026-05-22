@@ -51,7 +51,7 @@ export default function ContactPage() {
         intro="A question about a product, help choosing a ritual, or a note about an order — our team would love to hear from you."
       />
 
-      <section className="bg-cream pb-24 md:pb-36">
+      <section className="bg-cream pb-20 md:pb-28">
         <div className="container-x grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           {/* Contact details */}
           <div>

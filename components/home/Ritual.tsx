@@ -5,7 +5,7 @@ import { SectionHeading } from "../ui/section-heading";
 /** The three-step usage ritual — large editorial numerals. */
 export function Ritual() {
   return (
-    <section id="ritual" className="bg-cream py-24 md:py-36">
+    <section id="ritual" className="bg-cream py-20 md:py-28">
       <div className="container-x">
         <SectionHeading
           eyebrow="How it works"
@@ -17,7 +17,7 @@ export function Ritual() {
           intro="Effortless to follow and genuinely calming — Vaganza is designed to slip gently into your day."
         />
 
-        <div className="mt-16 grid gap-x-8 gap-y-14 md:mt-20 md:grid-cols-3">
+        <div className="mt-16 grid gap-x-8 gap-y-14 md:mt-16 md:grid-cols-3">
           {ritualSteps.map((step, index) => (
             <Reveal key={step.step} delay={index * 130}>
               <div className="border-t border-line pt-8">

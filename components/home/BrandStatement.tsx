@@ -3,7 +3,7 @@ import { Reveal } from "../ui/reveal";
 /** A calm, editorial statement of the brand's belief — a moment to breathe. */
 export function BrandStatement() {
   return (
-    <section className="bg-cream py-32 md:py-48">
+    <section className="bg-cream py-24 md:py-32">
       <div className="container-x">
         <Reveal className="mx-auto max-w-4xl text-center">
           <p className="eyebrow mb-9 text-rose">Our belief</p>

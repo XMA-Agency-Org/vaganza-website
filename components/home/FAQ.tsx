@@ -8,7 +8,7 @@ import { SectionHeading } from "../ui/section-heading";
 /** Frequently asked questions — handles objections before checkout. */
 export function FAQ() {
   return (
-    <section id="faq" className="bg-cream py-24 md:py-36">
+    <section id="faq" className="bg-cream py-20 md:py-28">
       <div className="container-x grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <SectionHeading

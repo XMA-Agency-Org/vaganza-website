@@ -18,7 +18,7 @@ export function BundleHighlight({ product }: { product?: Product }) {
     : 0;
 
   return (
-    <section className="bg-petal py-24 md:py-36">
+    <section className="bg-petal py-20 md:py-28">
       <div className="container-x">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Visual */}

@@ -65,8 +65,8 @@ export default async function HomePage() {
       <ProductShowcase products={products} />
       <Ingredients />
       <Ritual />
-      <Promises />
       <Testimonials />
+      <Promises />
       <BundleHighlight product={advanced} />
       <FAQ />
       <Newsletter />

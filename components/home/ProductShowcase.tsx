@@ -7,7 +7,7 @@ import { SectionHeading } from "../ui/section-heading";
 /** The product collection — the homepage's primary conversion surface. */
 export function ProductShowcase({ products }: { products: Product[] }) {
   return (
-    <section className="bg-cream py-24 md:py-36">
+    <section className="bg-cream py-20 md:py-28">
       <div className="container-x">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
@@ -29,7 +29,7 @@ export function ProductShowcase({ products }: { products: Product[] }) {
           </Button>
         </div>
 
-        <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+        <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
           {products.map((product, index) => (
             <Reveal key={product.id} delay={index * 130}>
               <ProductCard product={product} priority={index === 0} />

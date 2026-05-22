@@ -10,7 +10,7 @@ import { StarRating } from "../ui/star-rating";
  */
 export function Testimonials() {
   return (
-    <section className="bg-linen py-24 md:py-36">
+    <section className="bg-linen py-20 md:py-28">
       <div className="container-x">
         <SectionHeading
           eyebrow="Loved & trusted"
@@ -21,7 +21,7 @@ export function Testimonials() {
           }
         />
 
-        <div className="mt-16 grid gap-x-16 gap-y-14 md:mt-20 md:grid-cols-2">
+        <div className="mt-16 grid gap-x-16 gap-y-14 md:mt-16 md:grid-cols-2">
           {testimonials.map((testimonial, index) => (
             <Reveal key={index} delay={(index % 2) * 130}>
               <figure className="border-t border-line pt-8">

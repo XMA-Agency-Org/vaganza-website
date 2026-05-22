@@ -184,7 +184,7 @@ export default async function ProductPage({
       </div>
 
       {/* What's inside */}
-      <section className="bg-cream py-18 md:py-24">
+      <section className="bg-cream py-16 md:py-20">
         <div className="container-x">
           <SectionHeading
             eyebrow="What's inside"
@@ -215,7 +215,7 @@ export default async function ProductPage({
 
       {/* Related products */}
       {related.length > 0 && (
-        <section className="bg-linen py-18 md:py-24">
+        <section className="bg-linen py-16 md:py-20">
           <div className="container-x">
             <SectionHeading
               eyebrow="Complete the ritual"
