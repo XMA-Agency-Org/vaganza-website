@@ -31,6 +31,11 @@
   --animate-kenburns: kenburns 24s ease-in-out infinite alternate;
   --animate-scroll-cue: scroll-cue 2.4s ease-in-out infinite;
 
+  /* Hero entrance */
+  --animate-hero-fade: hero-fade 1.6s ease both;
+  --animate-hero-rise: hero-rise 1s var(--ease-soft) both;
+  --animate-hero-word: hero-word 0.9s var(--ease-soft) both;
+
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -80,6 +85,40 @@
   100% {
     transform: translateY(140%);
     opacity: 0;
+  }
+}
+
+/* Hero entrance — image fade, block rise, word-by-word focus-in. */
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-word {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
   }
 }
 
