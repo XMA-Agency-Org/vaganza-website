@@ -15,7 +15,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Solidify the header once the user scrolls past the hero edge.
+  // Add a hairline + lift once the user scrolls.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
     onScroll();
@@ -44,31 +44,36 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 transition-all duration-300",
+        "sticky top-0 z-50 bg-cream/95 backdrop-blur-md transition-shadow duration-300",
         scrolled
-          ? "border-b border-line bg-cream/95 backdrop-blur-md"
-          : "border-b border-transparent bg-cream/0",
+          ? "border-b border-line shadow-[0_10px_30px_-22px_rgba(47,32,39,0.5)]"
+          : "border-b border-transparent",
       )}
     >
-      <div className="container-x flex h-[4.6rem] items-center justify-between gap-4 md:h-[5rem]">
-        {/* Left — mobile menu toggle */}
-        <button
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/[0.06] md:hidden"
-        >
-          <MenuIcon className="h-6 w-6" />
-        </button>
+      <div className="container-x flex h-[4.5rem] items-center justify-between gap-6 md:h-20">
+        {/* Left — mobile toggle + logo */}
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+            className="-ml-1.5 flex h-10 w-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/[0.06] md:hidden"
+          >
+            <MenuIcon className="h-6 w-6" />
+          </button>
+          <Link href="/" aria-label="Vaganza — home">
+            <Logo />
+          </Link>
+        </div>
 
-        {/* Desktop nav — left */}
-        <nav className="hidden items-center gap-7 md:flex">
-          {navLinks.slice(0, 3).map((link) => (
+        {/* Center — desktop nav */}
+        <nav className="hidden items-center gap-9 md:flex">
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
                 "link-underline text-[0.92rem] font-medium transition-colors",
-                isActive(link.href) ? "text-plum" : "text-ink hover:text-plum",
+                isActive(link.href) ? "text-rose" : "text-ink hover:text-rose",
               )}
             >
               {link.label}
@@ -76,32 +81,7 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Center — logo */}
-        <Link
-          href="/"
-          aria-label="Vaganza — home"
-          className="absolute left-1/2 -translate-x-1/2"
-        >
-          <Logo />
-        </Link>
-
-        {/* Desktop nav — right */}
-        <nav className="hidden items-center gap-7 md:flex">
-          {navLinks.slice(3).map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "link-underline text-[0.92rem] font-medium transition-colors",
-                isActive(link.href) ? "text-plum" : "text-ink hover:text-plum",
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right — cart */}
+        {/* Right — actions */}
         <div className="flex items-center gap-1">
           <a
             href={siteConfig.phoneHref}
@@ -117,7 +97,7 @@ export function Header() {
           >
             <BagIcon className="h-6 w-6" />
             {hydrated && count > 0 && (
-              <span className="absolute top-0.5 right-0.5 flex h-[1.15rem] min-w-[1.15rem] items-center justify-center rounded-full bg-plum px-1 text-[0.66rem] font-semibold text-cream">
+              <span className="absolute top-0.5 right-0.5 flex h-[1.15rem] min-w-[1.15rem] items-center justify-center rounded-full bg-rose px-1 text-[0.66rem] font-semibold text-cream">
                 {count}
               </span>
             )}
@@ -165,7 +145,7 @@ export function Header() {
                 className={cn(
                   "rounded-2xl px-4 py-3 font-display text-2xl transition-colors",
                   isActive(link.href)
-                    ? "bg-linen text-plum"
+                    ? "bg-linen text-rose"
                     : "text-ink hover:bg-linen",
                 )}
               >
@@ -180,7 +160,7 @@ export function Header() {
               href={siteConfig.phoneHref}
               className="mt-1 flex items-center gap-2 font-display text-lg text-ink"
             >
-              <PhoneIcon className="h-5 w-5 text-plum" />
+              <PhoneIcon className="h-5 w-5 text-rose" />
               {siteConfig.phoneDisplay}
             </a>
           </div>

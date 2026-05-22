@@ -2,8 +2,9 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 /**
- * The Vaganza brand logo — the real "Secret Mask by Vaganza" lockup.
- * `tone="cream"` inverts it to white for use on dark backgrounds.
+ * The Vaganza logo — the brand's real circular badge mark paired with a
+ * Cormorant Garamond wordmark. A compact horizontal lockup that sits cleanly
+ * in headers and footers. `tone="cream"` inverts it for dark backgrounds.
  */
 export function Logo({
   className,
@@ -13,24 +14,35 @@ export function Logo({
   tone?: "ink" | "cream";
 }) {
   return (
-    <Image
-      src="/brand/logo.png"
-      alt="Vaganza"
-      width={626}
-      height={398}
-      priority
-      className={cn(
-        "h-12 w-auto select-none md:h-[3.4rem]",
-        tone === "cream" && "brightness-0 invert",
-        className,
-      )}
-    />
+    <span
+      className={cn("inline-flex items-center gap-2.5 select-none", className)}
+    >
+      <Image
+        src="/brand/mark.png"
+        alt=""
+        width={248}
+        height={244}
+        priority
+        className={cn(
+          "h-9 w-9 md:h-10 md:w-10",
+          tone === "cream" && "brightness-0 invert",
+        )}
+      />
+      <span
+        className={cn(
+          "font-display text-[1.7rem] leading-none font-medium tracking-[0.005em]",
+          tone === "cream" ? "text-cream" : "text-ink",
+        )}
+      >
+        Vaganza
+      </span>
+    </span>
   );
 }
 
 /**
  * The Vaganza leaf mark — a small two-leaf sprig used as a delicate accent
- * beside eyebrows, in the marquee, and as a fallback monogram.
+ * beside eyebrows and in the marquee.
  */
 export function LeafMark({ className }: { className?: string }) {
   return (
