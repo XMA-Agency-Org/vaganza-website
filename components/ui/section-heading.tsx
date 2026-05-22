@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Consistent section header: optional eyebrow, a display title, and intro copy.
- * Pass `<em>` inside `title` for an italic, sage-toned emphasis.
+ * Consistent section header: optional eyebrow, a large display title, and
+ * intro copy. Pass `<em>` inside `title` for an italic, rose-toned emphasis.
  */
 export function SectionHeading({
   eyebrow,
@@ -25,27 +25,29 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl",
+        align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl",
         className,
       )}
     >
       {eyebrow && (
         <p
           className={cn(
-            "eyebrow mb-4 flex items-center gap-2.5",
+            "eyebrow mb-6 flex items-center gap-3",
             align === "center" && "justify-center",
-            tone === "cream" ? "text-rose-soft" : "text-plum",
+            tone === "cream" ? "text-rose-soft" : "text-rose",
           )}
         >
-          <span className="h-px w-7 bg-current opacity-50" />
+          <span className="h-px w-9 bg-current opacity-60" />
           {eyebrow}
         </p>
       )}
       <Tag
         className={cn(
-          "font-display text-[clamp(2rem,1.25rem+2.7vw,3.45rem)] leading-[1.08] tracking-[-0.02em] text-balance",
-          "[&_em]:font-display [&_em]:italic",
-          tone === "cream" ? "text-cream [&_em]:text-rose-soft" : "text-ink [&_em]:text-rose",
+          "font-display font-normal text-[clamp(2.5rem,1.5rem+3.6vw,4.6rem)] leading-[1.03] tracking-[-0.02em] text-balance",
+          "[&_em]:italic",
+          tone === "cream"
+            ? "text-cream [&_em]:text-rose-soft"
+            : "text-ink [&_em]:text-rose",
         )}
       >
         {title}
@@ -53,8 +55,9 @@ export function SectionHeading({
       {intro && (
         <p
           className={cn(
-            "mt-5 text-[1.05rem] leading-relaxed",
-            tone === "cream" ? "text-cream/75" : "text-mauve",
+            "mt-6 text-[1.075rem] leading-relaxed",
+            align === "center" && "mx-auto max-w-xl",
+            tone === "cream" ? "text-cream/70" : "text-mauve",
           )}
         >
           {intro}

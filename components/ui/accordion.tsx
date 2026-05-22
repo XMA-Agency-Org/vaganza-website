@@ -28,12 +28,12 @@ export function Accordion({
                 type="button"
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 aria-expanded={isOpen}
-                className="group flex w-full items-center justify-between gap-5 py-5 text-left"
+                className="group flex w-full items-center justify-between gap-5 py-6 text-left"
               >
                 <span
                   className={cn(
-                    "font-display text-lg leading-snug transition-colors md:text-xl",
-                    isOpen ? "text-plum" : "text-ink group-hover:text-plum",
+                    "font-display text-xl leading-snug transition-colors md:text-2xl",
+                    isOpen ? "text-rose" : "text-ink group-hover:text-rose",
                   )}
                 >
                   {item.question}

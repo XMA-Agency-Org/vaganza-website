@@ -8,9 +8,9 @@ import { SectionHeading } from "../ui/section-heading";
 /** Frequently asked questions — handles objections before checkout. */
 export function FAQ() {
   return (
-    <section id="faq" className="bg-cream py-20 md:py-28">
-      <div className="container-x grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
-        <div>
+    <section id="faq" className="bg-cream py-24 md:py-36">
+      <div className="container-x grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div className="lg:sticky lg:top-28 lg:self-start">
           <SectionHeading
             align="left"
             eyebrow="Good to know"
@@ -21,9 +21,9 @@ export function FAQ() {
             }
             intro="Everything worth knowing before you begin your Vaganza ritual."
           />
-          <div className="mt-8 rounded-[1.75rem] border border-line bg-linen p-6">
-            <p className="font-display text-lg text-ink">Still curious?</p>
-            <p className="mt-1 text-sm leading-relaxed text-mauve">
+          <div className="mt-9">
+            <p className="font-display text-2xl text-ink">Still curious?</p>
+            <p className="mt-2 max-w-sm leading-relaxed text-mauve">
               Our team is happy to help you choose the right ritual for your
               skin.
             </p>
@@ -33,8 +33,8 @@ export function FAQ() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              size="sm"
-              className="mt-4"
+              size="md"
+              className="mt-5"
             >
               <WhatsappIcon className="h-4 w-4" />
               Chat with us

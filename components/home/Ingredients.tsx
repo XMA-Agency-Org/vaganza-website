@@ -1,48 +1,18 @@
 import { ingredients } from "@/lib/content";
-import { OrganicBlob } from "../ui/decor";
-import {
-  DropletIcon,
-  FeatherIcon,
-  HeartIcon,
-  type IconProps,
-  SparkleIcon,
-} from "../ui/icons";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
 
-/** Icons paired to the ingredients (same order as lib/content.ts). */
-const ICONS: ((p: IconProps) => React.ReactElement)[] = [
-  SparkleIcon, // Alpha Arbutin
-  FeatherIcon, // Aloe Vera
-  HeartIcon, // Collagen
-  DropletIcon, // Glycerin
-];
-
-const TINT: Record<string, string> = {
-  sage: "bg-rose-soft/25",
-  blush: "bg-petal/30",
-  clay: "bg-rose/35",
-};
-
-/** The "what's inside" section — the active ingredient story on a dark field. */
+/** The "what's inside" section — an immersive ingredient story on dark wine. */
 export function Ingredients() {
   return (
     <section
       id="ingredients"
-      className="relative overflow-hidden bg-wine py-20 text-cream md:py-28"
+      className="bg-wine py-24 text-cream md:py-40"
     >
-      <OrganicBlob
-        aria-hidden
-        className="absolute -top-24 -right-24 h-96 w-96 text-plum/20"
-      />
-      <OrganicBlob
-        aria-hidden
-        className="absolute -bottom-32 -left-24 h-80 w-80 text-plum/15"
-      />
-
-      <div className="container-x relative">
+      <div className="container-x">
         <SectionHeading
           tone="cream"
+          align="left"
           eyebrow="What's inside"
           title={
             <>
@@ -52,34 +22,27 @@ export function Ingredients() {
           intro="Four considered ingredients, each chosen for the way it cares for delicate skin — no harsh fillers, no compromise."
         />
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {ingredients.map((ingredient, index) => {
-            const Icon = ICONS[index] ?? DropletIcon;
-            return (
-              <Reveal key={ingredient.name} delay={index * 90}>
-                <div className="group h-full rounded-[1.75rem] border border-cream/10 bg-cream/[0.04] p-7 transition-colors duration-300 hover:bg-cream/[0.08]">
-                  <div className="flex items-center gap-4">
-                    <span
-                      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-cream ${
-                        TINT[ingredient.accent] ?? TINT.sage
-                      }`}
-                    >
-                      <Icon className="h-7 w-7" />
-                    </span>
-                    <div>
-                      <p className="eyebrow text-rose-soft">{ingredient.role}</p>
-                      <h3 className="mt-0.5 font-display text-2xl text-cream">
-                        {ingredient.name}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="mt-4 leading-relaxed text-cream/65">
-                    {ingredient.copy}
-                  </p>
+        <div className="mt-16 grid gap-x-16 gap-y-14 md:mt-24 md:grid-cols-2">
+          {ingredients.map((ingredient, index) => (
+            <Reveal key={ingredient.name} delay={(index % 2) * 130}>
+              <div className="border-t border-cream/15 pt-8">
+                <div className="flex items-baseline justify-between gap-4">
+                  <span className="eyebrow text-rose-soft">
+                    {ingredient.role}
+                  </span>
+                  <span className="font-display text-3xl text-cream/20">
+                    0{index + 1}
+                  </span>
                 </div>
-              </Reveal>
-            );
-          })}
+                <h3 className="mt-4 font-display text-[2.6rem] leading-[1.05] text-cream">
+                  {ingredient.name}
+                </h3>
+                <p className="mt-4 max-w-md leading-relaxed text-cream/65">
+                  {ingredient.copy}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

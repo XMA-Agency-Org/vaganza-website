@@ -2,10 +2,10 @@ import { ritualSteps } from "@/lib/content";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
 
-/** The three-step usage ritual — reduces purchase hesitation. */
+/** The three-step usage ritual — large editorial numerals. */
 export function Ritual() {
   return (
-    <section id="ritual" className="bg-cream py-20 md:py-28">
+    <section id="ritual" className="bg-cream py-24 md:py-36">
       <div className="container-x">
         <SectionHeading
           eyebrow="How it works"
@@ -17,23 +17,17 @@ export function Ritual() {
           intro="Effortless to follow and genuinely calming — Vaganza is designed to slip gently into your day."
         />
 
-        <div className="relative mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
-          {/* Connecting line */}
-          <div
-            aria-hidden
-            className="absolute top-9 right-[16%] left-[16%] hidden border-t border-dashed border-plum/30 md:block"
-          />
-
+        <div className="mt-16 grid gap-x-8 gap-y-14 md:mt-20 md:grid-cols-3">
           {ritualSteps.map((step, index) => (
-            <Reveal key={step.step} delay={index * 110}>
-              <div className="relative flex flex-col items-center text-center">
-                <span className="flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border border-line bg-cream font-display text-2xl text-plum shadow-sm">
+            <Reveal key={step.step} delay={index * 130}>
+              <div className="border-t border-line pt-8">
+                <span className="font-display text-7xl leading-none text-rose/30 md:text-8xl">
                   {step.step}
                 </span>
-                <h3 className="mt-6 font-display text-2xl text-ink">
+                <h3 className="mt-6 font-display text-[2rem] leading-tight text-ink">
                   {step.title}
                 </h3>
-                <p className="mt-2.5 max-w-xs leading-relaxed text-mauve">
+                <p className="mt-3 max-w-xs leading-relaxed text-mauve">
                   {step.copy}
                 </p>
               </div>

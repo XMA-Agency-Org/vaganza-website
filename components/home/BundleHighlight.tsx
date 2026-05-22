@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import { CheckIcon } from "../ui/icons";
 import { Reveal } from "../ui/reveal";
 
-/** A focused conversion push for the best-value collection. */
+/** A focused conversion moment for the best-value collection. */
 export function BundleHighlight({ product }: { product?: Product }) {
   if (!product) return null;
 
@@ -18,19 +18,19 @@ export function BundleHighlight({ product }: { product?: Product }) {
     : 0;
 
   return (
-    <section className="bg-petal py-20 md:py-28">
+    <section className="bg-petal py-24 md:py-36">
       <div className="container-x">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Visual */}
           <Reveal>
-            <div className="relative mx-auto max-w-md">
-              <div className="aspect-square overflow-hidden rounded-[2.5rem] border border-rose/30 shadow-[0_40px_70px_-40px_rgba(43,42,36,0.5)]">
+            <div className="relative">
+              <div className="aspect-square overflow-hidden rounded-[1.5rem] shadow-[0_50px_90px_-50px_rgba(47,32,39,0.6)]">
                 {product.featuredImage ? (
                   <Image
                     src={product.featuredImage.url}
                     alt={product.featuredImage.altText}
                     fill
-                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    sizes="(min-width: 1024px) 44vw, 90vw"
                     className="object-cover"
                   />
                 ) : (
@@ -43,11 +43,11 @@ export function BundleHighlight({ product }: { product?: Product }) {
                 )}
               </div>
               {saved > 0 && (
-                <div className="absolute -top-5 -right-3 flex h-[5.5rem] w-[5.5rem] flex-col items-center justify-center rounded-full bg-rose text-center text-cream shadow-lg sm:-right-5">
-                  <span className="text-[0.62rem] tracking-[0.14em] uppercase">
+                <div className="absolute -top-6 -right-3 flex h-24 w-24 flex-col items-center justify-center rounded-full bg-plum text-center text-cream shadow-xl sm:-right-6">
+                  <span className="text-[0.58rem] tracking-[0.18em] uppercase">
                     Save
                   </span>
-                  <span className="font-display text-2xl leading-none">
+                  <span className="font-display text-3xl leading-none">
                     {saved}%
                   </span>
                 </div>
@@ -56,32 +56,32 @@ export function BundleHighlight({ product }: { product?: Product }) {
           </Reveal>
 
           {/* Pitch */}
-          <Reveal delay={120}>
-            <p className="eyebrow flex items-center gap-2.5 text-rose">
-              <span className="h-px w-7 bg-current opacity-50" />
-              Best value · {product.sessions} sessions
+          <Reveal delay={140}>
+            <p className="eyebrow flex items-center gap-3 text-rose">
+              <span className="h-px w-9 bg-current opacity-60" />
+              Best value · {product.sessions} treatments
             </p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,1.3rem+2.4vw,3rem)] leading-[1.1] tracking-[-0.02em] text-ink">
+            <h2 className="mt-6 font-display text-[clamp(2.2rem,1.4rem+2.7vw,3.7rem)] leading-[1.05] tracking-[-0.02em] text-ink">
               The complete{" "}
               <em className="italic text-rose">{product.title}</em>
             </h2>
-            <p className="mt-4 max-w-md leading-relaxed text-mauve">
+            <p className="mt-5 max-w-md leading-relaxed text-mauve">
               {product.description}
             </p>
 
-            <ul className="mt-6 flex flex-col gap-2.5">
+            <ul className="mt-8 flex flex-col gap-3">
               {product.highlights.map((highlight) => (
                 <li key={highlight} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-plum text-cream">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-plum text-cream">
                     <CheckIcon className="h-3 w-3" />
                   </span>
-                  <span className="text-[0.95rem] text-ink">{highlight}</span>
+                  <span className="text-[0.975rem] text-ink">{highlight}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-7 flex items-baseline gap-3">
-              <span className="font-display text-3xl text-ink">
+            <div className="mt-9 flex items-baseline gap-3">
+              <span className="font-display text-[2.5rem] leading-none text-ink">
                 {formatMoney(price.amount, price.currencyCode)}
               </span>
               {compareAt && saved > 0 && (
@@ -91,7 +91,7 @@ export function BundleHighlight({ product }: { product?: Product }) {
               )}
             </div>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <AddToCartButton product={product} size="lg" withIcon />
               <Button
                 href={`/products/${product.handle}`}
